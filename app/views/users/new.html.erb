@@ -1,17 +1,48 @@
+
+<h1>Form HTML </h1>
+<form>
+ <div class="row">
+   <div class="col">
+     <input type="text" class="form-control" placeholder="Username">
+   </div>
+   <div class="col">
+     <input type="text" class="form-control" placeholder="Email">
+   </div>
+       <div class="col">
+     <input type="text" class="form-control" placeholder="Biography">
+   </div>
+     <div class="col">
+   <input type="submit" class="btn btn-primary">
+    </div>
+ </div>
+ </form>
+
+<h1>Form_tag</h1><br>
 <%= form_tag url_for(action: 'create'), method: "post" do %>
 
       <%= label_tag 'username' %>
-      <%= text_field_tag 'name', @user.create.username %>
+      <%= text_field_tag 'username', @user.username %>
       <br /> <br />
 
       <%= label_tag 'email' %>
-      <%= text_area_tag 'email', @user.create.email %>
+      <%= text_area_tag 'email', @user.email %>
       <br /> <br />
 
       <%= label_tag 'bio' %>
-      <%= text_field_tag 'bio', @user.create.bio %>
+      <%= text_field_tag 'bio', @user.bio %>
       <br /> <br />
 
       <%= submit_tag "Create User" %>
 
     <% end %>
+<br>
+
+<h1 class="text-center"><u>Utiliser le Form for</u></h1> <br>
+<%= form_for @user, url: {action: "create"} do |f| %>
+<div class="container" >
+  <%= f.text_field :username, class: "form-control", placeholder: "username" %>
+  <%= f.text_field :email, class: "form-control", placeholder: "email" %>
+  <%= f.text_area :bio, class: "form-control", placeholder: "bio" %>
+  <%= f.submit "Create User", class: "btn btn-primary" %>
+  </div>
+<% end %>
