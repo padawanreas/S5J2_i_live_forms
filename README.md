@@ -3,7 +3,7 @@
 ## Projet : The Gossip Project
 
 
-## Liens du projet:https://formthp.herokuapp.com/
+## Lien du projet:https://formthp.herokuapp.com/
 
 ## Auteurs
 
